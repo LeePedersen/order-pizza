@@ -22,6 +22,7 @@ body {
 #show-pizza {
   background-color: rgba(242, 103, 17, 0.7);
   padding: 20px;
+  height: 380px;
 }
 
 #size-select {
@@ -30,4 +31,9 @@ body {
 
 #submit-btn {
   margin-top: 40px;
+}
+
+#pizza-img {
+  float: right;
+  width: 300px;
 }
