@@ -36,6 +36,8 @@ Pizza.prototype.calcPrice = function(toppingsNumber, size) {
     } else {
       price = 14;
     }
+  } else {
+    alert("Congratulations, you successfully broke it");
   }
   return price;
 }
