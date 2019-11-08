@@ -12,16 +12,18 @@ Pizza.prototype.setSize = function(size) {
 
 var newPizza = new Pizza();
 
-function showPizza() {
-  $("#show-pizza").text(newPizza.toppings);
-  console.log(newPizza.toppings);
+function showPizza(pizzaShow) {
+  var htmlPizza = "";
+
+  for (var i = 0; i < 7; i++) {
+    $("#show-pizza").append("<li>" + newPizza.toppings[i] + "</li>");
+  }
+  console.log(newPizza.toppings[0]);
 }
 
 $(document).ready(function() {
   $("form#new-pizza").submit(function(event) {
     event.preventDefault();
-
-
 
     var topping1 = $("input:checkbox[id=topping1]:checked").val();
     var topping2 = $("input:checkbox[id=topping2]:checked").val();
