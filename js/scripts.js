@@ -77,6 +77,8 @@ $(document).ready(function() {
     newPizza.addTopping(topping5);
     newPizza.addTopping(topping6);
 
+    newPizza.toppings = newPizza.toppings.filter(word => word);
+
     newPrice = newPizza.calcPrice(newPizza.toppings.length, inputSize);
 console.log(newPizza.toppings);
     showPizza();
