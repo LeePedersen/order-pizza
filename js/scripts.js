@@ -46,7 +46,6 @@ function showPizza(pizzaShow) {
   $("#new-pizza").hide();
   $("#show-pizza").show();
   $("#show-size").text(newPizza.size);
-
   $("#show-price").text(newPrice);
 
   for (var i = 0; i < 7; i++) {
@@ -79,7 +78,6 @@ $(document).ready(function() {
     newPizza.addTopping(topping6);
 
     newPizza.toppings = newPizza.toppings.filter(word => word);
-
     newPrice = newPizza.calcPrice(newPizza.toppings.length, inputSize);
 console.log(newPizza.toppings);
     showPizza();

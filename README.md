@@ -27,6 +27,14 @@ _The program prints the output in a nice list_<br>
 _Input: jalapenos, habaneros_<br>
 _Output: jalapenos_<br>_habaneros_<br>
 
+_The program asks user for size as well, and returns that value_<br>
+_Input: small, jalapenos_<br>
+_Output: You have ordered a small pizza with the following toppings: jalapenos_<br>
+
+_The program returns price based on size and number of toppings_<br>
+_Input: small, jalapenos_<br>
+_Output: Your total is $8_<br>
+
 ## Support and Contact Details
 
 _For issues contact support@leepedersen.com_
