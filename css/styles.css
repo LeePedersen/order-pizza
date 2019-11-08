@@ -11,3 +11,7 @@ body {
   border-radius: 0px;
   background-color: rgba(242, 103, 17, 0.7);
 }
+
+#new-pizza {
+  background-color: rgba(242, 103, 17, 0.7);
+}
