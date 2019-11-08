@@ -13,7 +13,15 @@
       <h1>Your Pizza</h1>
     </div>
     <div class="container">
+
       <form id="new-pizza">
+        <label>Select a size</label>
+        <select class="form-control" id="input-size">
+          <option>small</option>
+          <option>medium</option>
+          <option>large</option>
+        </select>
+        <label>Select up to 6 toppings</label>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="peppers" id="topping1">
           <label class="form-check-label" for="topping1">Peppers</label>
@@ -40,11 +48,10 @@
         </div>
         <button type="submit" name="button">Submit pizza</button>
       </form>
-      <div id="pizza-results">
-        <ul id="show-pizza">
-          
+      <div id="show-pizza">
+        <p>You have ordered a <span id="show-size"></span> pizza with the following toppings:</p>
+        <ul id="show-toppings">
         </ul>
-
       </div>
 
     </div>
