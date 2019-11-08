@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil|Wallpoet&display=swap" rel="stylesheet">
     <script src="js/jquery-3.4.1.js" charset="utf-8"></script>
     <script src="js/scripts.js" charset="utf-8"></script>
     <meta charset="utf-8">
@@ -15,13 +16,17 @@
     <div class="container">
 
       <form id="new-pizza">
-        <label>Select a size</label>
-        <select class="form-control" id="input-size">
-          <option>small potatoes</option>
-          <option>happy medium</option>
-          <option>by and large</option>
-        </select>
-        <label>Select up to 6 toppings</label>
+
+        <div id="size-select">
+          <h2>Select a size</h2>
+          <select class="form-control" id="input-size">
+            <option>small potatoes</option>
+            <option>happy medium</option>
+            <option>by and large</option>
+          </select>
+        </div>
+
+        <h2>Select up to 6 toppings</h2>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="peppers" id="topping1">
           <label class="form-check-label" for="topping1">Peppers</label>
@@ -46,13 +51,14 @@
           <input class="form-check-input" type="checkbox" value="red peppers" id="topping6">
           <label class="form-check-label" for="topping6">Red Peppers</label>
         </div>
-        <button type="submit" name="button">Submit pizza</button>
+        <button type="submit" name="button" id="submit-btn">Submit pizza</button>
       </form>
+
       <div id="show-pizza">
-        <p>You have ordered a <span id="show-size"></span> pizza with the following toppings:</p>
+        <h2>You have ordered a <span id="show-size"></span> pizza with the following toppings:</h2>
         <ul id="show-toppings">
         </ul>
-        <p>Your total is $<span id="show-price"></span></p>
+        <h2>Your total is $<span id="show-price"></span></h2>
       </div>
 
     </div>

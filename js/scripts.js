@@ -43,6 +43,7 @@ Pizza.prototype.calcPrice = function(toppingsNumber, size) {
 var newPizza = new Pizza();
 
 function showPizza(pizzaShow) {
+  $("#new-pizza").hide();
   $("#show-pizza").show();
   $("#show-size").text(newPizza.size);
 

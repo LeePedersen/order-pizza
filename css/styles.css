@@ -5,6 +5,8 @@
 body {
   background-image: url(img/orange.jpg);
   background-size: 100%;
+  font-family: 'Stardos Stencil';
+  font-size: 20px;
 }
 
 #header {
@@ -14,4 +16,18 @@ body {
 
 #new-pizza {
   background-color: rgba(242, 103, 17, 0.7);
+  padding: 20px;
+}
+
+#show-pizza {
+  background-color: rgba(242, 103, 17, 0.7);
+  padding: 20px;
+}
+
+#size-select {
+  padding-bottom: 40px;
+}
+
+#submit-btn {
+  margin-top: 40px;
 }
