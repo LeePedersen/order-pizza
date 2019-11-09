@@ -50,6 +50,10 @@ function showPizza(pizzaShow) {
   $("#show-size").text(newPizza.size);
   $("#show-price").text(newPrice);
 
+  if (!newPizza.toppings.length) {
+    $("#show-toppings").append("<li>" + "none because you're a boring person" + "</li>");
+  }
+
   for (var i = 0; i < 7; i++) {
     if (newPizza.toppings[i]) {
       $("#show-toppings").append("<li>" + newPizza.toppings[i] + "</li>");
