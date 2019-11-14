@@ -10,28 +10,30 @@ Pizza.prototype.setSize = function(size) {
   this.size = size;
 }
 
-Pizza.prototype.calcPrice = function(toppingsNumber, size) {
+Pizza.prototype.calcPrice = function() {
   var price = "";
-  if (size === "small potatoes") {
-    if (toppingsNumber < 3) {
+  console.log(this.toppings.length);
+  console.log(this.size);
+  if (this.size === "small potatoes") {
+    if (this.toppings.length < 3) {
       price = 8;
-    } else if (toppingsNumber < 6) {
+    } else if (this.toppings.length < 6) {
       price = 9;
     } else {
       price = 10;
     }
-  } else if (size === "happy medium") {
-    if (toppingsNumber < 3) {
+  } else if (this.size === "happy medium") {
+    if (this.toppings.length < 3) {
       price = 10;
-    } else if (toppingsNumber < 6) {
+    } else if (this.toppings.length < 6) {
       price = 11;
     } else {
       price = 12;
     }
-  } else if (size === "by and large") {
-    if (toppingsNumber < 3) {
+  } else if (this.size === "by and large") {
+    if (this.toppings.length < 3) {
       price = 12;
-    } else if (toppingsNumber < 6) {
+    } else if (this.toppings.length < 6) {
       price = 13;
     } else {
       price = 14;
@@ -39,31 +41,14 @@ Pizza.prototype.calcPrice = function(toppingsNumber, size) {
   } else {
     alert("Congratulations, you successfully broke it");
   }
-  return price;
-}
-
-var newPizza = new Pizza();
-
-function showPizza(pizzaShow) {
-  $("#new-pizza").hide();
-  $("#show-pizza").show();
-  $("#show-size").text(newPizza.size);
-  $("#show-price").text(newPrice);
-
-  if (!newPizza.toppings.length) {
-    $("#show-toppings").append("<li>" + "none because you're a boring person" + "</li>");
-  }
-
-  for (var i = 0; i < 7; i++) {
-    if (newPizza.toppings[i]) {
-      $("#show-toppings").append("<li>" + newPizza.toppings[i] + "</li>");
-    }
-  }
+  this.price = price;
 }
 
 $(document).ready(function() {
   $("form#new-pizza").submit(function(event) {
     event.preventDefault();
+
+    var newPizza = new Pizza();
 
     var inputSize = $("#input-size").val();
 
@@ -84,8 +69,26 @@ $(document).ready(function() {
     newPizza.addTopping(topping6);
 
     newPizza.toppings = newPizza.toppings.filter(word => word);
-    newPrice = newPizza.calcPrice(newPizza.toppings.length, inputSize);
-console.log(newPizza.toppings);
+
+    newPizza.calcPrice();
+
+    function showPizza(pizzaShow) {
+      $("#new-pizza").hide();
+      $("#show-pizza").show();
+      $("#show-size").text(newPizza.size);
+      $("#show-price").text(newPizza.price);
+
+      if (!newPizza.toppings.length) {
+        $("#show-toppings").append("<li>" + "none because you're a boring person" + "</li>");
+      }
+
+      for (var i = 0; i < 7; i++) {
+        if (newPizza.toppings[i]) {
+          $("#show-toppings").append("<li>" + newPizza.toppings[i] + "</li>");
+        }
+      }
+    }
+
     showPizza();
 
   });

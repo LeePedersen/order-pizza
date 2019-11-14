@@ -18,8 +18,6 @@ body {
 #new-pizza {
   background-color: rgba(242, 103, 17, 0.7);
   padding: 20px;
-  float: right;
-  width: 80%;
 }
 
 #show-pizza {
@@ -41,9 +39,8 @@ body {
   width: 300px;
 }
 
-.sidebar {
-  height: 100%;
-  width: 160px;
-  position: fixed;
+.bottomText {
   background-color: rgba(242, 103, 17, 0.7);
+  font-size: 15px;
+  padding: 20px;
 }
